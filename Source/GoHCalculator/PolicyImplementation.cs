@@ -1,11 +1,7 @@
 ﻿namespace GoHCalculator
 {
-	class PolicyImplementation : Policy
+	class PolicyImplementation(HousingAssociation association) : Policy(association)
 	{
-		public PolicyImplementation(HousingAssociation association): base(association)
-		{	
-		}
-
 		/// Implement function DetermineNewRent below.
 		/// It determines the new house rent price of the house for a given house for the current year in the simulation.
 		/// 

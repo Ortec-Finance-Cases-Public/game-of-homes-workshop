@@ -4,46 +4,33 @@ In the *Game of Homes* you need to create and implement the best 30-year-policy 
 
 # Getting started
 
-## Requirements
+## Opening a Codespace
 
-* Windows 10, Version 1607 or newer (see [Supported Windows Releases](https://learn.microsoft.com/en-us/dotnet/core/install/windows#supported-releases)).
-* MacOS 10.15 "Catalina" or newer (see [Supported macOS Releases](https://learn.microsoft.com/en-us/dotnet/core/install/macos#supported-releases)).
-* Various Linux distributions (see [Install .NET on Linux](https://learn.microsoft.com/en-us/dotnet/core/install/linux)).
+In this repository, click the green button `Use this template`, then click `Open in a Codespace`.
 
-## Installation
+The Codespace runs a Linux environment with the .NET SDK installed. It is a fully functional development environment, so you can run the code and make changes to it.
 
-Download and install [.NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0) for either Windows, MacOS or Linux. `Make sure that you pick the correct version`like x64 otherwise it will not run. It is unlikely that you need x86 since all CPU's nowadays are 64 bit (=`x64`).
-For more details which OS is supported and how to install see https://docs.microsoft.com/en-us/dotnet/core/install/.
-Download and install [Visual Studio Code](https://code.visualstudio.com/download) for either Windows, MacOS or Linux.
+Creating the Codespace may take a few minutes, so be patient. Once the Codespace is ready, you will see a terminal window and a file explorer on the left side of the screen. C# extensions are automatically installed after the Codespace is created, so feel free to start with running the dashboard.
 
 ## Running the dashboard
 
-Start Visual Studio Code, go to menu `View --> Extensions` and search for C#. Choose `C# for Visual Studio Code (Microsoft)`.
+Open the terminal in the Codespace, if not already open. You can do this by clicking on the terminal icon in the bottom left corner or by going to the menu `Terminal --> New Terminal`.
 
-Download the source files. They are packed in a zip archive, extract the files to a local folder.
+Navigate to the Source directory by running the following command: `cd Source`.
 
-In visual studio code, go to menu `File --> Open Folder`. Navigate to the `Source`folder that you have just extracted from the zip file. This last step is important otherwise paths are wrong and you cannot run the program. If visual studio asks for  installing  missing  assets  then choose Yes.
+Run the following statement: 
 
-In the bottom there is window with a tab `Terminal`. If not, go to menu `Terminal --> New Terminal`.
-Run the following statement:
+`dotnet watch --project ./GoHDashboard/Blazor-Dashboard run`
 
+After restoring the dependencies and building the project, the dashboard will start running on port 5001. A popup will show in the bottom right corner of the screen. Click `Open in a browser`. If you do not see this popup, you can click the `PORTS` tab in the terminal to get the forwarded address.
 
-Windows: `dotnet watch --project .\GoHDashboard\Blazor-Dashboard run`
-
-Linux or macOS: `dotnet watch --project ./GoHDashboard/Blazor-Dashboard run`
-
-
-A browser window pops up with page [https://localhost:5001](https://localhost:5001), if not please navigate to this address yourself. The page shows the dashboard that presents the results. It is a good idea to open the page in incognito / private mode, because sometime the page is cached and new results do appear only after clearing your browsers cache.
+The page shows the dashboard that presents the results. It is a good idea to open the page in incognito / private mode, because sometime the page is cached and new results do appear only after clearing your browsers cache.
 
 The page refreshes itself during the assignment so that you see how the modifications pan out.
 
-If something is not working it can be that you need to either `restart Visual Studio Code`, or even `reboot your machine`. The above  dotnet  command restores everything, compiles the dashboard project and starts a listener automatically. If it does not restore, run
-
-`dotnet restore`
-
 ## Running the game of homes simulation
 
-Just press F5 or go to menu `Run --> Start debugging`. If required, choose the game of homes calculator. This starts a simulation and some output is printed to the terminal. If finished, head over to the browser. The new results will be shown. If not, please refresh the page.
+Go to menu `Run and Debug --> Run and Debug`. If required, choose the game of homes calculator. This starts a simulation and some output is printed to the terminal. If finished, head over to the browser. The new results will be shown. If not, please refresh the page.
 Sometimes the results do not change, in that case you have to clear the cache of the browser. How to do this depends on the browser that you are using which can be easily found by looking on the internet. Of just open the page in incognito mode.
 
 ## Goals
